@@ -1,6 +1,6 @@
 teletraan-agent Cookbook
 ========================
-TODO: Configures teletraan agent
+Configures teletraan agent
 
 
 Attributes
