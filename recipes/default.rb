@@ -47,6 +47,6 @@ template 'agent_conf' do
 end
 
 cron 'teletraan' do
-  minute '1'
+  minute '*'
   command 'deploy-agent -f /opt/teletraan/agent.conf -n ' + node['hostname']
 end
