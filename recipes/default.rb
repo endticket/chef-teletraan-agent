@@ -48,5 +48,5 @@ end
 
 cron 'teletraan' do
   minute '*'
-  command 'deploy-agent -f /opt/teletraan/agent.conf -n ' + node['hostname']
+  command '/usr/local/bin/deploy-agent -f /opt/teletraan/agent.conf -n ' + node['hostname']
 end
