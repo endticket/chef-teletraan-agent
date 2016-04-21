@@ -46,7 +46,12 @@ template 'agent_conf' do
      })
 end
 
+my_env_vars = {"SHELL" => "/bin/sh", "PATH" => "/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"}    
+
+
 cron 'teletraan' do
   minute '*'
+  environment my_env_vars
   command '/usr/local/bin/deploy-agent -f /opt/teletraan/agent.conf -n ' + node['hostname']
 end
+
